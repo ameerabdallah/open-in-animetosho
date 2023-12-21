@@ -12,20 +12,19 @@ const properties = {
 };
 
 const anyUrlPatterns = ["http://*/*", "https://*/*"];
+const nyaaUrlPattern = "*://nyaa.si/view/*";
 chrome.contextMenus.create({
     ...properties,
     id: properties.id + "-link",
     contexts: ["link"],
-    targetUrlPatterns: anyUrlPatterns,
+    targetUrlPatterns: [nyaaUrlPattern],
     documentUrlPatterns: anyUrlPatterns
 });
 
-const nyaaUrlPattern = "*://nyaa.si/view/*";
 chrome.contextMenus.create({
     ...properties,
     id: properties.id + "-page",
     contexts: ["page"],
-    targetUrlPatterns: [nyaaUrlPattern],
     documentUrlPatterns: [nyaaUrlPattern]
 });
 
