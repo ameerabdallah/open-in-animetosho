@@ -3,10 +3,8 @@
     "name": "Nyaa to AnimeTosho Linker",
     "version": "1.0",
     "permissions": [
-        "contextMenus"
-    ],
-    "host_permissions": [
-        "*://*/*"
+        "contextMenus",
+        "activeTab"
     ],
     "background": {
         "service_worker": "background.js"
